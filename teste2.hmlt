@@ -1,0 +1,19 @@
+<p>
+  pg1 works!
+</p>
+
+
+<article class="card"
+         [ngClass]="condition ? 'active' : 'inactive'"
+         (click)="activateClass()">
+  <div class="card-graph">
+    <img src="assets/logoB2.png"/>
+    <h1>graph : 1</h1>
+  </div>
+  <div class="card-infos">
+    <div>
+      <p>item 1</p>
+      <p>item 2</p>
+    </div>
+  </div>
+</article>
