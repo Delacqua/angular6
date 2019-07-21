@@ -1,0 +1,66 @@
+.card {
+  position: relative;
+  height: 100px;
+  border-radius: 10px;
+  width: 200px;
+  background: rgba(128, 128, 128, 0.2);
+  overflow: hidden;
+
+  .card-graph,
+  .card-infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .card-infos {
+    left: 100%;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.card .active {
+  .card-graph {
+    animation-duration: 1s;
+    animation-name: slideInGraph;
+  }
+
+  .card-infos {
+    animation-duration: 1s;
+    animation-name: slideInInfo;
+  }
+}
+
+@keyframes slideInGraph {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes slideInInfo {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
